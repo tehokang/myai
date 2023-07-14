@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>myai</title>
+</head>
+<body style="margin:0" background=black>
+<tab-group new-tab-button="false" sortable="true">
+  <style>
+    /* Add custom styles */
+    .my-badge {
+      background-color: #327BB1;
+    }
+    .my-custom-tab {
+      color: #d135d1;
+      font-style: italic;
+      font-weight: bold;
+    }
+  </style>
+</tab-group>
+
+<script src="../js/electron-tabs.js"></script>
+
+<script>
+  const tabGroup = document.querySelector("tab-group");
+  tabGroup.on("ready", () => console.info("TabGroup is ready"));
+
+  tabGroup.addTab({
+    title: "Poe",
+    src: "https://poe.com/Sage",
+    active: true
+  });
+
+  tabGroup.addTab({
+    title: "Playground.ai",
+    src: "https://playgroundai.com/",
+  });
+
+  tabGroup.addTab({
+    title: "Bing Image ",
+    src: "https://www.bing.com/images/create?",
+  });
+</script>
+</body>
+</html>

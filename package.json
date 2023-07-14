@@ -1,0 +1,38 @@
+{
+	"name": "myai",
+	"license": "MIT",
+	"author": "teho",
+	"version": "1.0.0",
+	"description": "My AI assistance with chatgpt",
+	"main": "dist/browser.js",
+	"build": {
+		"productName": "myai",
+		"appId": "com.ohet.myai",
+		"asar": true,
+		"files": [
+			"dist/**/*"
+		],
+		"mac": {
+			"mergeASARs": false
+		},
+		"icon": "dist/assets/icons/poe.png"
+	},
+	"scripts": {
+		"assets": "cp -fr src/assets dist",
+		"build": "tsc && yarn assets",
+		"start": "yarn build && ELECTRON_ENABLE_LOGGING=1 electron dist/browser.js",
+		"release": "yarn clean && yarn build && electron-builder --universal",
+		"clean": "rm -fr dist"
+	},
+	"devDependencies": {
+		"electron": "^25.2.0",
+		"electron-builder": "^24.4.0",
+		"electron-tabs": "^1.0.1",
+		"typescript": "^5.1.6"
+	},
+	"dependencies": {
+		"electron-chrome-extension": "^5.0.0",
+		"electron-chrome-extensions": "^3.10.1",
+		"nodemon": "^2.0.22"
+	}
+}
