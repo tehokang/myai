@@ -8,6 +8,12 @@ This is an example to run electron with ai services
 > yarn build
 ```
 
+## How to run on local machine
+
+```bash
+> yarn start
+```
+
 ## How to release to installer
 
 ```bash
@@ -15,4 +21,4 @@ This is an example to run electron with ai services
 ```
 
 Then you can see the installer in dist folder.
-And you should change build.mac in packages.json for your runtime environment like windows, linux and so on.
+And you should replace build.mac with another one in packages.json for your runtime environment like windows, linux and so on.
